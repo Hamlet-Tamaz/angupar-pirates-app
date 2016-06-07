@@ -1,0 +1,21 @@
+<div style='text-align: center'>
+
+<h1>Todos App</h1>
+
+<form name='todoForm' ng-submit='home.submitTodo($event)'>
+	<input type="text" ng-model='home.todo' id='todoInput'>
+	<!-- <input type="text"> -->
+</form>
+
+<!-- <h1>{{home.name}}</h1> -->
+
+<!-- <p style="border: black solid 2px">{{home}}</p> -->
+
+<p ng-repeat='item in home.todos'>
+	<span ng-click='home.updateItem($event, item)' ng-Dblclick='home.setUpdate($event, item)'>{{item.todo}}</span>
+	<button ng-click='home.editable($event, item)'>Edit</button>
+	<button ng-click='home.deleteTodo(item.id)'> Delete </button>
+
+</p>
+
+</div>
