@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Pirate #{{show.pirate.id}}
+    <a href="#" ng-click='show.removePirate(show.pirate.id)'>
+      <span class='glyphicon glyphicon-remove pull-right'></span>
+    </a>
+    <a href="/pirates/edit/{{show.pirate.id}}">
+      <span ng-click='show.updatePirate(show.pirate.id)' style='margin-right: 10px' class='glyphicon glyphicon-pencil pull-right'></span>
+    </a>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-4">
+        <img ng-src="{{show.pirate.image_url}}" alt="">
+      </div>
+      <div class="col-sm-8">
+        <h2>{{ show.pirate.name }}</h2>
+        <p>Poison: {{ show.pirate.poison }}</p>
+        <p>Accessory: {{ show.pirate.accessory }}</p>
+      </div>
+    </div>
+  </div>
+</div>
